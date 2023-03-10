@@ -15,7 +15,7 @@ public class Bear extends Predator{
     public static final int MAX_VALUES_ON_CELL = 5;
     public static final int MAX_MOVE = 2;
     public static final int AMOUNT_OF_FOOD = 80;
-    Map<Class<? extends Organism>, Integer> probabilityToEating = new HashMap<>();
+    public static Map<Class<? extends Organism>, Integer> probabilityToEating = new HashMap<>();
     private Cell cell;
 
     public Bear(){

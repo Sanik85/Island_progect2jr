@@ -16,7 +16,7 @@ public class Boar extends Herbivore{
     public static final int MAX_VALUES_ON_CELL = 50;
     public static final int MAX_MOVE = 2;
     public static final int AMOUNT_OF_FOOD = 50;
-    Map<Class<? extends Organism>, Integer> probabilityToEating = new HashMap<>();
+    public static Map<Class<? extends Organism>, Integer> probabilityToEating = new HashMap<>();
     private Cell cell;
 
     public Boar(){

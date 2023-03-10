@@ -15,7 +15,7 @@ public class Mouse extends Herbivore{
     public static final int MAX_VALUES_ON_CELL = 500;
     public static final int MAX_MOVE = 1;
     public static final double AMOUNT_OF_FOOD = 0.01;
-    Map<Class<? extends Organism>, Integer> probabilityToEating = new HashMap<>();
+    public static Map<Class<? extends Organism>, Integer> probabilityToEating = new HashMap<>();
     private Cell cell;
     public Mouse(){
         initProbabilityToEating();
