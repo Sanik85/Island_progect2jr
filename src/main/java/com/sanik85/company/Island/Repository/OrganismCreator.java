@@ -6,12 +6,14 @@ import com.sanik85.company.Island.Organisms.Plants.Plant;
 import com.sanik85.company.Island.Organisms.Predator.*;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class OrganismCreator {
 
-    private static final Set<Organism> ORGANISMS_TYPES = new HashSet<>();
+    private static final List<Organism> ORGANISMS_TYPES = new ArrayList<>();
 
 
     static {

@@ -6,34 +6,34 @@ import com.sanik85.company.Island.IslandMap.Cell;
 
 public class Plant extends Organism {
 
-    public final String NAME = "Plant";
-    public final int WEIGHT = 1;
-    public final String ICON = "";
-    public final int MAX_VALUES_ON_CELL = 200;
+    public static final String NAME = "Plant";
+    public static final int WEIGHT = 1;
+    public static final String ICON = "\uD83C\uDF31";
+    public static final int MAX_VALUES_ON_CELL = 200;
     private Cell cell;
 
     public Plant grow(){
         return new Plant();
     }
+
+    @Override
     public Cell getCell() {
-        return cell;
+        return this.cell;
     }
 
-    public void setCell(Cell cell) {
-        this.cell = cell;
+    @Override
+    public void setCell(Cell ceel) {
+        this.cell = ceel;
     }
 
-    public String getName() {
-        return NAME;
-    }
-
-    public int getWeight() {
-        return WEIGHT;
-    }
-
-    public int getMaxValuesOnCell() {
-        return MAX_VALUES_ON_CELL;
+    @Override
+    public int getMaxMove() {
+        return 0;
     }
 
 
+    @Override
+    public int getMaxAmountOnCell() {
+        return this.MAX_VALUES_ON_CELL;
+    }
 }

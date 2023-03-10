@@ -1,6 +1,7 @@
 package com.sanik85.company.Island.IslandMap;
 
 import com.sanik85.company.Island.AbstractOrganisms.Organism;
+import com.sanik85.company.Island.Repository.OrganismCreator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,14 +12,23 @@ import java.util.Random;
 public class Island {
     private final CellCreator cellCreator = new CellCreator();
     private final List<Organism> typesOfOrganisms;
+    public volatile Cell[][] cells;
     public int i;
     public int j;
 
-    private Cell[][] cells = new Cell[i][j];
-
-    public Island(List<Organism> typesOfOrganisms) {
+    public Island(List<Organism> typesOfOrganisms, Cell[][] cells, int i, int j) {
         this.typesOfOrganisms = typesOfOrganisms;
+        this.cells = new Cell[i][j];
     }
+
+//    public void createCell(){
+//        for (int k = 0; k < cells.length; k++) {
+//            for (int l = 0; l < cells[k].length; l++) {
+//                cells[k][l] = cellCreator.createCell(typesOfOrganisms);
+//            }
+//        }
+//    }
+
 
     public Cell nextCell(Cell cell){
         Random random = new Random();
